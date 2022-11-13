@@ -1,7 +1,6 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-const blockchain = require('../models/blockchain');
 
 
 //Connect with blockchain Model

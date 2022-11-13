@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,6 +15,12 @@ router.get('/home', function(req, res, next) {
 router.get('/past', function(req, res, next) {
   res.render('index', { title: 'Past' });
 });
+
+/* GET home page. */
+router.get('/blockchain-list', function(req, res, next) {
+  res.render('index', { title: 'Blockchain List' });
+});
+
 
 /* GET Contact page. */
 router.get('/contact', function(req, res, next) {
