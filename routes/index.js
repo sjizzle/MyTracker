@@ -6,6 +6,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Crypto' });
 });
 
+/* GET home page. */
+router.get('/home', function(req, res, next) {
+  res.render('index', { title: 'Crypto' });
+});
+
 /* GET Past page. */
 router.get('/past', function(req, res, next) {
   res.render('index', { title: 'Past' });
