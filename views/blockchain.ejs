@@ -8,7 +8,7 @@
     <h1><%= title %> </h1>
     <br>
 
-    <table class="table table-bordered table-stripped table-hover">
+    <table class="table">
     <tr>
         <th class="text-center">Name</th>
         <th class="text-center">Created/th>
@@ -18,14 +18,14 @@
 
     </tr>
 
-    <!-- Repeat the Template -->
-    <% for{let count=0; count<Blockchainlist.length; count ++} { %>
+    <!-- Repeat the template with loop -->
+    <% for(let count=0; count < Booklist.length; count++) {%>
     <tr>
-        <td clasd="text-center"><%= Blockchainlist[count].Name %></td>
-        <td clasd="text-center"><%= Blockchainlist[count].Name %></td>
-        <td clasd="text-center"><%= Blockchainlist[count].Name %></td>
-        <td clasd="text-center"><%= Blockchainlist[count].Name %></td>
-        <td clasd="text-center"><%= Blockchainlist[count].Name %></td>
+        <td clasd="text-center"><%= Blockchainlist[count].name %></td>
+        <td clasd="text-center"><%= Blockchainlist[count].created %></td>
+        <td clasd="text-center"><%= Blockchainlist[count].popularity %></td>
+        <td clasd="text-center"><%= Blockchainlist[count].total %></td>
+        <td clasd="text-center"><%= Blockchainlist[count].price %></td>
     </tr>
 
     <% } %>
