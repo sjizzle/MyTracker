@@ -8,7 +8,7 @@ let blockchainModel = mongoose.Schema({
     price: String
     },
     {
-        collection: "blockchain"
+        collections: "blockchains"
     }
 
 );

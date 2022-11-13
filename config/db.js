@@ -1,4 +1,4 @@
 module.exports = 
 {
-    "URI": "mongodb://localhost/blockchain"
+    "URI": "mongodb://localhost/cryptocurrencies"
 }
