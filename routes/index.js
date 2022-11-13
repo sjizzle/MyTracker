@@ -16,7 +16,7 @@ router.get('/past', function(req, res, next) {
   res.render('index', { title: 'Past' });
 });
 
-/* GET home page. */
+/* GET Crypto page. */
 router.get('/blockchain-list', function(req, res, next) {
   res.render('index', { title: 'Blockchain List' });
 });

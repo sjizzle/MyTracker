@@ -27,6 +27,15 @@
         </li>
 
         <li class="nav-item">
+          <% if (title == "BlockChain") { %>
+            <a class="nav-link active" href="/blockchain-list">
+          <% } else { %>
+            <a class="nav-link" href="/blockchain-list">
+          <% } %>
+            <i class="fa-solid fa-envelope"></i> Blockchain</a>
+        </li>
+
+        <li class="nav-item">
           <% if (title == "Contact") { %>
             <a class="nav-link active" href="/contact">
           <% } else { %>
