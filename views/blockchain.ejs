@@ -1,15 +1,19 @@
+<!-- Header -->
 <% include partials/header.ejs %>
-<% include partials/main_nav.ejs %>
 <!-- Main Navigation -->
+<% include partials/main_nav.ejs %>
+<!-- Main content -->
 <main class="container">
-
-    <div class="row">
-    <div class="col-md offset-3 col-md-6">
-    <h1><%= title %> </h1>
-    <br>
-
-    <table class="table table-bordered table-stripped table-hover">
-    <tr>
+    <div class="rows">
+    <div class="col-md-offset-3 col-md-6">
+        <h1><%= title %></h1>
+        <a href="/book-list/add" class="btn btn-primary" role="button">
+        <i class="fas fa-plus-circle"></i> Add Book</a>
+        <br>
+        <br>
+    
+    <table class="table table-bordered table-striped table-hover">
+    <tr class="d-flex">
         <th class="text-center col-2">Name</th>
         <th class="text-center col-2">Created</th>
         <th class="text-center col-2">Popular</th>
@@ -22,7 +26,7 @@
 
     <!-- Repeat the template with loop -->
     <% for(let count=0; count<Blockchainlist.length; count++) { %>
-    <tr>
+    <tr class="d-flex">
         <td class="text-center col-2"><%= Blockchainlist[count].name %></td>
         <td class="text-center col-2"><%= Blockchainlist[count].created %></td>
         <td class="text-center col-2"><%= Blockchainlist[count].popular %></td>

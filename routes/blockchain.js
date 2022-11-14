@@ -9,16 +9,16 @@ let Blockchain = require('../models/blockchain');
 /* Get Route for the Blockchain List */
 
 router.get('/',(req,res,next) => {
-    Blockchain.find((err, blockchainlist)=> {
+    Blockchain.find((err, Blockchainlist)=> {
         if(err)
         {
             return console.error(err);
         }
         else
         {
-            res.render('blockchain-list',{
+            res.render('blockchain',{
                 title: 'Blockchain List',
-                Blockchainlist: blockchainlist});
+                Blockchainlist: blockchain});
         }
     });
 });
