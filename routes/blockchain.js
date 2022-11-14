@@ -16,7 +16,7 @@ router.get('/',(req,res,next) => {
         }
         else
         {
-            res.render('blockchain',{
+            res.render('blockchain-list',{
                 title: 'Blockchain List',
                 Blockchainlist: blockchainlist});
         }
