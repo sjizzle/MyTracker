@@ -9,7 +9,7 @@ let Blockchain = require('../models/blockchain');
 /* Get Route for the Blockchain List */
 
 router.get('/',(req,res,next) => {
-    Blockchain.find((err, Blockchainlist)=> {
+    Blockchain.find((err, blockchainlist)=> {
         if(err)
         {
             return console.error(err);
@@ -18,7 +18,7 @@ router.get('/',(req,res,next) => {
         {
             res.render('blockchain',{
                 title: 'Blockchain List',
-                Blockchain: Blockchain});
+                Blockchainlist: blockchainlist});
         }
     });
 });

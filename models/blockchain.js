@@ -12,4 +12,4 @@ let blockchainModel = mongoose.Schema({
     }
 
 );
-module.exports = mongoose.model('Blockchain', blockchainModel);
+module.exports = mongoose.model('Blockchains', blockchainModel);
