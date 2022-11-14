@@ -8,8 +8,8 @@ let blockchainModel = mongoose.Schema({
     price: String
     },
     {
-        collection: "blockchains"
+        collection: 'blockchains'
     }
 
 );
-module.exports = mongoose.model('Blockchains', blockchainModel);
+module.exports = mongoose.model('blockchain', blockchainModel);
