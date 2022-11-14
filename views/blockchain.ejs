@@ -8,33 +8,34 @@
     <h1><%= title %> </h1>
     <br>
 
-    <table class="table">
+    <table class="table table-bordered table-stripped table-hover">
     <tr>
-        <th class="text-center">Name</th>
-        <th class="text-center">Created/th>
-        <th class="text-center">Popular</th>
-        <th class="text-center">Total</th>
-        <th class="text-center">Price</th>
+        <th class="text-center col-2">Name</th>
+        <th class="text-center col-2">Created</th>
+        <th class="text-center col-2">Popular</th>
+        <th class="text-center col-6">Total</th>
+        <th class="text-center col-2">Price</th>
+        <th class="text-center col-2">Edit</th>
+        <th class="text-center col-2">Delete</th>
 
     </tr>
 
-
     <!-- Repeat the template with loop -->
-    <% for(let count=0; count < Booklist.length; count++) {%>
+    <% for(let count=0; count<Blockchainlist.length; count++) { %>
     <tr>
-        <td class="text-center  col-2"><%= Booklist[count].name %></td>
-        <td class="text-center  col-2"><%= Booklist[count].created %></td>
-        <td class="text-center  col-1"><%= Booklist[count].popular %></td>
-        <td class="text-center  col-6"><%= Booklist[count].total %></td>
-        <td class="text-center  col-1"><%= Booklist[count].price %></td>
-        <td class="text-center col-1">
-            <a href="/book-list/edit/<%= Booklist[count]._id %>"
+        <td class="text-center col-2"><%= Blockchainlist[count].name %></td>
+        <td class="text-center col-2"><%= Blockchainlist[count].created %></td>
+        <td class="text-center col-2"><%= Blockchainlist[count].popular %></td>
+        <td class="text-center col-6"><%= Blockchainlist[count].total %></td>
+        <td class="text-center col-2"><%= Blockchainlist[count].price %></td>
+        <td class="text-center col-2">
+            <a href="/book-list/edit/<%= Blockchainlist[count]._id %>"
                 class="btn btn-primary">
                 <i class="fas fa-pencil-alt"><i>Edit</a>
         </td>
 
         <td class="text-center col-1">
-            <a href="/book-list/delete/<%= Booklist[count]._id %>"
+            <a href="/book-list/delete/<%= Blockchainlist[count]._id %>"
                 class="btn btn-danger">
                 <i class="fas fa-trash-alt"><i>Delete</a>
         </td>
