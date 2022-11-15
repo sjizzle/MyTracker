@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 let blockchainModel = mongoose.Schema({
     name: String,
     created: Number,
-    popular: String,
+    popularity: String,
     total: Number,
     price: String
     },
@@ -12,4 +12,4 @@ let blockchainModel = mongoose.Schema({
     }
 
 );
-module.exports = mongoose.model('blockchain', blockchainModel);
+module.exports = mongoose.model('Blockchain', blockchainModel);
