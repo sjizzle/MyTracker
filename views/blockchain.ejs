@@ -25,21 +25,21 @@
     </tr>
 
     <!-- Repeat the template with loop -->
-    <% for(let count=0; count<Blockchainlist.length; count++) { %>
+    <% for(let count=0; count<Blockchainslist.length; count++) { %>
     <tr class="d-flex">
-        <td class="text-center col-2"><%= Blockchainlist[count].name %></td>
-        <td class="text-center col-2"><%= Blockchainlist[count].created %></td>
-        <td class="text-center col-2"><%= Blockchainlist[count].popular %></td>
-        <td class="text-center col-6"><%= Blockchainlist[count].total %></td>
-        <td class="text-center col-2"><%= Blockchainlist[count].price %></td>
+        <td class="text-center col-2"><%= Blockchainslist[count].name %></td>
+        <td class="text-center col-2"><%= Blockchainslist[count].created %></td>
+        <td class="text-center col-2"><%= Blockchainslist[count].popular %></td>
+        <td class="text-center col-6"><%= Blockchainslist[count].total %></td>
+        <td class="text-center col-2"><%= Blockchainslist[count].price %></td>
         <td class="text-center col-3">
-            <a href="/book-list/edit/<%= Blockchainlist[count]._id %>"
+            <a href="/book-list/edit/<%= Blockchainslist[count]._id %>"
                 class="btn btn-primary">
                 <i class="fas fa-pencil-alt"><i>Edit</a>
         </td>
 
         <td class="text-center col-3">
-            <a href="/book-list/delete/<%= Blockchainlist[count]._id %>"
+            <a href="/book-list/delete/<%= Blockchainslist[count]._id %>"
                 class="btn btn-danger">
                 <i class="fas fa-trash-alt"><i>Delete</a>
         </td>

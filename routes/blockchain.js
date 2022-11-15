@@ -3,13 +3,13 @@ let router = express.Router();
 let mongoose = require('mongoose');
 
 //Connect with blockchain Model
-let Blockchain = require('../models/blockchain');
+let Blockchains = require('../models/blockchain');
 
 /* Read Operation */
 /* Get Route for the Blockchain List */
 
 router.get('/',(req,res,next) => {
-    Blockchain.find((err, blockchainslist)=> {
+    Blockchains.find((err, blockchainslist)=>{
         if(err)
         {
             return console.error(err);
@@ -18,7 +18,7 @@ router.get('/',(req,res,next) => {
         {
             res.render('blockchain',{
                 title: 'Blockchain List',
-                Blockchainslist: blockchainslist});
+                Blockchainlist: blockchainslist});
         }
     });
 });
