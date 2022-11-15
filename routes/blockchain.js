@@ -8,17 +8,18 @@ let Blockchain = require('../models/blockchain');
 /* Read Operation */
 /* Get Route for the Blockchain List */
 
-router.get('/',(req,res,next) => {
-    Blockchain.find((err, blockchainslist)=> {
-        if(err)
-        {
+router.get('/',(req,res,next)=>{
+    Blockchain.find((err, blockchainslist)=>{
+        if (err) {
             return console.error(err);
         }
-        else
+
+        else 
         {
-            res.render('blockchain',{
+            res.render('blockchain', {
                 title: 'Blockchain List',
-                Blockchainslist: blockchainslist});
+                Blockchainslist: blockchainslist
+            });
         }
     });
 });
