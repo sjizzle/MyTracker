@@ -18,7 +18,7 @@ router.get('/',(req,res,next) => {
         {
             res.render('blockchain',{
                 title: 'Blockchain List',
-                Blockchainlist: blockchainslist});
+                Blockchainslist: blockchainslist});
         }
     });
 });
