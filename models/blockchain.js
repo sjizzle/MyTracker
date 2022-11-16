@@ -2,13 +2,13 @@ let mongoose = require('mongoose');
 // create models
 let blockchainModel = mongoose.Schema({
     name: String,
-    created: Number,
+    created: String,
     popularity: String,
-    total: Number,
+    total: String,
     price: String
     },
     {
-        collection: 'blockchains'
+        collection: "blockchains"
     }
 
 );

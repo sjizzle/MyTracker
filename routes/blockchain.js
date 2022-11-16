@@ -16,8 +16,8 @@ router.get('/',(req,res,next)=>{
 
         else 
         {
-            res.render('blockchain', {
-                title: 'Blockchain List',
+            res.render('Blockchain/blockchain', {
+                title: 'Blockchain First List',
                 Blockchainlist: blockchainlist
             });
         }

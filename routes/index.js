@@ -16,10 +16,6 @@ router.get('/past', function(req, res, next) {
   res.render('index', { title: 'Past' });
 });
 
-/* GET DB page. */
-router.get('/blockchain-list', function(req, res, next) {
-  res.render('index', { title: 'Blockchain List' });
-});
 
 
 /* GET Contact page. */
