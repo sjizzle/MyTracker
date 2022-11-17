@@ -1,0 +1,47 @@
+<!-- Main content -->
+<main class="container">
+    <div class="rows">
+    <div class="col-md-offset-3 col-md-10">
+        <h1><%= title %></h1>
+        <a href="blockchain-list/add" class="btn btn-primary" role="button">
+        <i class="fas fa-circle"></i> Add Crypto</a>
+        <br>
+        <br>
+    
+    
+    <table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th class="text-center col-1">Name</th>
+        <th class="text-center col-1">Created</th>
+        <th class="text-center col-1">Popularity</th>
+        <th class="text-center col-1">Total</th>
+        <th class="text-center col-1">Price</th>
+        <th class="text-center col-2"></th>
+        <th class="text-center col-2"></th>
+    </tr>
+
+<!-- Repeat the template with loop! -->
+<% for(let count=0; count<Blockchainlist.length; count++) {%>
+<tr>
+    <td class="text-center col-2"><%= Blockchainlist[count].name %></td>
+    <td class="text-center col-2"><%= Blockchainlist[count].created %></td>
+    <td class="text-center col-2"><%= Blockchainlist[count].popularity %></td>
+    <td class="text-center col-2"><%= Blockchainlist[count].total %></td>
+    <td class="text-center col-2"><%= Blockchainlist[count].price %></td>
+    <td class="text-center col-3"><a href="/blockchain-list/edit/<%= Blockchainlist[count].id %>"
+    class="btn btn-primary"
+    <i class="fas fa-pencil-alt"></i>Edit</a>
+    </td>
+    <td class="text-center col-3"><a href="/blockchain-list/delete/<%= Blockchainlist[count].id %>"
+    class="btn btn-danger"
+    <i class="fas fa-trash-alt"></i>Delete</a>
+    </td>
+</tr>
+
+<% } %>
+   
+    </table>
+    <div>
+
+</div>
+</main>
