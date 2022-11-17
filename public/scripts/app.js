@@ -7,14 +7,14 @@
         let deletionButtons = document.querySelectorAll('.btn-danger');
     for(button of deletionButtons)
     {
-        button.addEventListener('click',(event=>{
+        button.addEventListener('click',(event)=>{
             if(!confirm('Are you sure?'))
             {
                 event.preventDefault();
-                window.location.assign('/blockchain-list');
+                window.location.assign('/blockchain');
             }
-        }));
+        });
     }  
     }
-    window.addEventListener('load', Start);
+    window.addEventListener("load", Start);
 })();
