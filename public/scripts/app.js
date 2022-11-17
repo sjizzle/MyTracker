@@ -5,6 +5,17 @@
     {
 
         console.log('App Started');
+        let deletionButtons = document.querySelectorAll('.btn-danger');
+    for(button of deletionButtons)
+    {
+        button.addEventListener('click',(event=>{
+            if(!confirm('Are you sure?'))
+            {
+                event.preventDefault();
+                window.location.assign('/blockchain-list');
+            }
+        });
+    }
         
     }
     window.addEventListener('load', Start);
