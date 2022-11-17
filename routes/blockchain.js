@@ -67,7 +67,7 @@ router.get('edit/:id', (req,res,next)=>{
         }
         else
         {
-            res.render('Blockchain/edit',{title:'Edit Blockchain', blockchain:blockchainToEdit});
+            res.render('Blockchain/edit',{title:'Edit Blockchain', Blockchain:blockchainToEdit});
         }
     });
 });

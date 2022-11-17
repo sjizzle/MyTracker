@@ -16,8 +16,6 @@ router.get('/past', function(req, res, next) {
   res.render('index', { title: 'Past' });
 });
 
-
-
 /* GET Contact page. */
 router.get('/contact', function(req, res, next) {
   res.render('index', { title: 'Contact' });
