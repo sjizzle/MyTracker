@@ -3,7 +3,6 @@
 (function(){
     function Start()
     {
-
         console.log('App Started');
         let deletionButtons = document.querySelectorAll('.btn-danger');
     for(button of deletionButtons)
@@ -14,9 +13,8 @@
                 event.preventDefault();
                 window.location.assign('/blockchain-list');
             }
-        });
-    }
-        
+        }));
+    }  
     }
     window.addEventListener('load', Start);
 })();
