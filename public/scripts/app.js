@@ -1,20 +1,20 @@
 // IFFE - Immediately Invoked Function Expression 
-
 (function(){
     function Start()
     {
         console.log('App Started');
-        let deletionButtons = document.querySelectorAll('.btn-danger');
-    for(button of deletionButtons)
+    }
+    window.addEventListener("load", Start);
+
+    let deleteButtons = document.querySelectorAll('.btn-danger');
+    for(button of deleteButtons)
     {
         button.addEventListener('click',(event)=>{
-            if(!confirm('Are you sure?'))
+            if(!confirm('Are you certain?'))
             {
                 event.preventDefault();
                 window.location.assign('/blockchain');
             }
         });
     }  
-    }
-    window.addEventListener("load", Start);
 })();
