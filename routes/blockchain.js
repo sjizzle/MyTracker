@@ -23,4 +23,12 @@ router.get('/',(req,res,next)=>{
         }
     });
 });
+
+/** Add Operation */
+/** Get Route for add page contents */
+
+router.get('/add', (req,res,next)=>{
+    res.render('blockchain/add', {title: 'Add Crypto'})
+});
+
 module.exports = router;

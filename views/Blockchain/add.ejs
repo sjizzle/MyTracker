@@ -1,0 +1,63 @@
+<!-- Header -->
+<% include ../partials/header.ejs %>
+<!-- Main Navigation -->
+<% include ../partials/main_nav.ejs %>
+<!-- Main content -->
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-6">
+<h1><%= title %></h1>
+<form class="form" method="post">
+
+    <div class="form group">
+    <label for="nameTextField">Name</label>
+    <input type="text" class="form-control"
+    id="nameTextField"
+    placeholder="Enter Crypto Name"
+    name="name" required>
+
+    <div class="form group">
+    <label for="createdTextField">Created</label>
+    <input type="text" class="form-control"
+    id="createdTextField"
+    placeholder="Enter Year Created"
+    name="created" required>
+
+    <div class="form group">
+    <label for="popularityTextField">Popularity</label>
+    <input type="text" class="form-control"
+    id="popularityTextField"
+    placeholder="Enter Popularity"
+    name="popularity" required>
+
+    <div class="form group">
+    <label for="totalTextField">Total</label>
+    <input type="text" class="form-control"
+    id="totalTextField"
+    placeholder="Enter Total-Supply"
+    name="total" required>
+
+    <div class="form group">
+    <label for="priceTextField">Price</label>
+    <input type="text" class="form-control"
+    id="priceTextField"
+    placeholder="Enter Price"
+    name="price" required>
+
+    <br>
+    <button class"btn btn-primary" type="submit">
+        <i class="fas fa-edit"></i>Submit
+    </button>
+
+    <a href="/blockchain-list" class="btn btn-warning">
+    <i class="fas fa-undo"></i>Cancel</a>
+</form>
+</div>
+</div>
+</div>
+
+
+<!-- Bottom Navigation -->
+<%- include ../partials/bottom_nav.ejs %>
+<!-- Footer -->
+<%- include ../partials/footer.ejs %>
