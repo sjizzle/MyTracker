@@ -4,32 +4,18 @@ let mongoose = require('mongoose');
 
 //Connect with blockchain Model
 let Blockchain = require('../models/blockchain');
+let blockchainController = require('../controller/blockchain');
+/* CRUD Operation */
 
 /* Read Operation */
 /* Get Route for the Blockchain List */
 
-router.get('/',(req,res,next)=>{
-    Blockchain.find((err, blockchainlist)=>{
-        if (err) {
-            return console.error(err);
-        }
-
-        else 
-        {
-            res.render('Blockchain/blockchain', {
-                title: 'Blockchain List',
-                Blockchainlist: blockchainlist
-            });
-        }
-    });
-});
+router.get('/', blockchainController.displayBookList);
 
 /** Add Operation */
 /** Get Route for add page contents */
 
-router.get('/add', (req,res,next)=>{
-    res.render('blockchain/add', {title: 'Add Crypto'})
-});
+router.get('/add', blockchainController.displayAddPage);
 
 /** Post Routes for process Add to Page */
 router.post('/add', (req,res,next)=>{
