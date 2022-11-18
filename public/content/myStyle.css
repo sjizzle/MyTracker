@@ -1,5 +1,10 @@
 body {
     background-color: lightgrey;
+    
+}
+
+h1 {
+    font-family: 'Shadows Into Light', cursive;
 }
 
 .form1 {
