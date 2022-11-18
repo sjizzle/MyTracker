@@ -6,18 +6,13 @@ let indexController = require('../controller/index');
 router.get('/', indexController.displayHomePage);
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home' });
-});
+router.get('/home',  indexController.displayHomePage);
 
 /* GET Past page. */
-router.get('/past', function(req, res, next) {
-  res.render('index', { title: 'Past' });
-});
+router.get('/past', indexController.displayPastPage);
 
 /* GET Contact page. */
-router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact' });
-});
+router.get('/contact', indexController.displayContactPage);
+
 
 module.exports = router;
