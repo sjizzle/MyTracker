@@ -10,7 +10,7 @@ let blockchainController = require('../controller/blockchain');
 /* Read Operation */
 /* Get Route for the Blockchain List */
 
-router.get('/', blockchainController.displayBookList);
+router.get('/', blockchainController.displayHomePage);
 
 /** Add Operation */
 /** Get Route for add page contents */

@@ -6,7 +6,7 @@ let mongoose = require('mongoose');
 let Blockchain = require('../models/blockchain');
 /* CRUD Operation */
 
-module.exports.displayBookList = router.get('/',(req,res,next)=>{
+module.exports.displayHomePage= router.get('/',(req,res,next)=>{
     Blockchain.find((err, blockchainlist)=>{
         if (err) {
             return console.error(err);
