@@ -13,7 +13,7 @@
             if(!confirm('Are you certain?'))
             {
                 event.preventDefault();
-                window.location.assign('/blockchain');
+                window.location.assign('/blockchain-list');
             }
         });
     }  
