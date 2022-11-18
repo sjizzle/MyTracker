@@ -1,4 +1,3 @@
-// IFFE - Immediately Invoked Function Expression 
 (function(){
     function Start()
     {
