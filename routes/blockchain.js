@@ -28,20 +28,6 @@ router.get('edit/:id', blockchainController.displayEditPage);
     router.post('/edit/:id', blockchainController.processEditPage);
 /** Delete Operations */
 /** Get Mode - for Deleting Content */
-    router.get('/delete/:id', (req,res,next)=>{
-        let id=req.params.id;
-        Blockchain.deleteOne({_id:id}, (err)=>{
-            if(err)
-            {
-                console.log(err);
-                res.end(err);
-            }
-            else
-            {
-                res.redirect('/blockchain-list');
-            }
-        });
-    });
-
+    router.get('/delete/:id', blockchainController.displayDeletePage);
 
 module.exports = router;
