@@ -2,10 +2,7 @@
     function Start()
     {
         console.log('App Started');
-    }
-    window.addEventListener("load", Start);
-
-    let deleteButtons = document.querySelectorAll('.btn-danger');
+        let deleteButtons = document.querySelectorAll('.btn-danger');
     for(button of deleteButtons)
     {
         button.addEventListener('click',(event)=>{
@@ -16,4 +13,6 @@
             }
         });
     }  
+    }
+    window.addEventListener("load", Start);
 })();
