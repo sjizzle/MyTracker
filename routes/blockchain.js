@@ -18,70 +18,14 @@ router.get('/', blockchainController.displayBookList);
 router.get('/add', blockchainController.displayAddPage);
 
 /** Post Routes for process Add to Page */
-router.post('/add', (req,res,next)=>{
-    let newBlockchain = Blockchain({
-        "name":req.body.name,
-        "created":req.body.created,
-        "popularity":req.body.popularity,
-        "total":req.body.total,
-        "price":req.body.price
-        });
-        Blockchain.create(newBlockchain, (err,Blockchain)=>{
-        if(err)
-        {
-            console.log(err);
-            res.end(err);
-        }
-        else
-        {
-            res.redirect('/blockchain-list');
-        }
-
-    });
-});
-
+router.post('/add', blockchainController.processAddPage);
 /** Edit Operation */
 /** Get route for displaing the edit operations */
 
-router.get('edit/:id', (req,res,next)=>{
-    let id=req.params.id;
-    Blockchain.findById(id,(err,blockchainToEdit)=>{
-        if(err)
-        {
-            console.log(err);
-            res.end(err);
-        }
-        else
-        {
-            res.render('blockchain/edit',{title:'Edit Blockchain', blockchain:blockchainToEdit});
-        }
-    });
-});
+router.get('edit/:id', blockchainController.displayEditPage);
 
 /** Post route for displaying the edit operations - update */
-    router.post('/edit/:id', (req,res,next)=>{
-        let id=req.params.id;
-        let updateBlockchain = Blockchain({
-            "_id":id,
-            "name":req.body.name,
-            "created":req.body.created,
-            "popularity":req.body.popularity,
-            "total":req.body.total,
-            "price":req.body.price
-        });
-        Blockchain.updateOne({_id:id}, updateBlockchain,(err)=>{
-            if(err)
-            {
-                console.log(err);
-                res.end(err);
-            }
-            else{
-                res.redirect('/blockchain-list');
-            }
-        });
-
-});
-
+    router.post('/edit/:id', blockchainController.processEditPage);
 /** Delete Operations */
 /** Get Mode - for Deleting Content */
     router.get('/delete/:id', (req,res,next)=>{
