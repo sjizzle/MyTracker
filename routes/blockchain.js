@@ -28,6 +28,6 @@ router.get('edit/:id', blockchainController.displayEditPage);
     router.post('/edit/:id', blockchainController.processEditPage);
 /** Delete Operations */
 /** Get Mode - for Deleting Content */
-    router.get('/delete/:id', blockchainController.displayDeletePage);
+    router.get('/delete/:id', blockchainController.DeletePage);
 
 module.exports = router;
